@@ -21,7 +21,7 @@ const ButtonLead = ({ extraStyle }: { extraStyle?: string }) => {
     try {
       await apiClient.post("/lead", { email });
 
-      toast.success("Thanks for joining the waitlist!");
+      toast.success("Thank you for registering! 🎉");
 
       // just remove the focus on the input
       inputRef.current.blur();
@@ -50,7 +50,7 @@ const ButtonLead = ({ extraStyle }: { extraStyle?: string }) => {
       />
 
       <button
-        className="btn btn-primary btn-block"
+        className="btn btn-primary bg-customBlue text-white btn-block"
         type="submit"
         disabled={isDisabled}
       >
