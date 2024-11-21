@@ -7,6 +7,7 @@ import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import FeaturesGrid from '@/components/FeaturesGrid';
 
 export default function Home() {
   return (

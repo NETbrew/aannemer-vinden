@@ -8,26 +8,25 @@ import Image from "next/image";
 import ButtonSignin from "./ButtonSignin";
 import logo from "@/app/icon.png";
 import config from "@/config";
+import { FaXTwitter } from "react-icons/fa6";
 
 const links: {
   href: string;
   label: string;
 }[] = [
   {
-    href: "/#pricing",
-    label: "Pricing",
+    href: "/#problem",
+    label: "Problem",
   },
   {
-    href: "/#testimonials",
-    label: "Reviews",
+    href: "/#features",
+    label: "Features",
   },
   {
     href: "/#faq",
     label: "FAQ",
   },
 ];
-
-const cta: JSX.Element = <ButtonSignin extraStyle="btn-primary" />;
 
 // A header with a logo on the left, links in the center (like Pricing, etc...), and a CTA (like Get Started or Login) on the right.
 // The header is responsive, and on mobile, the links are hidden behind a burger button.
@@ -84,6 +83,7 @@ const Header = () => {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                color="#e6e9ea"
                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
               />
             </svg>
@@ -105,7 +105,9 @@ const Header = () => {
         </div>
 
         {/* CTA on large screens */}
-        <div className="hidden lg:flex lg:justify-end lg:flex-1">{cta}</div>
+        <div className="hidden lg:flex lg:justify-end lg:flex-1">
+          <a href="https://x.com/VanLeuffelenC" className="p-3 rounded hover:bg-gray-900 transition cursor-pointer"><FaXTwitter size={20} color="#FFF"/></a>
+        </div>
       </nav>
 
       {/* Mobile menu, show/hide based on menu state. */}
@@ -171,8 +173,9 @@ const Header = () => {
               </div>
             </div>
             <div className="divider"></div>
-            {/* Your CTA on small screens */}
-            <div className="flex flex-col">{cta}</div>
+            <div>
+              <a href="https://x.com/VanLeuffelenC" className="p-3  cursor-pointer"><FaXTwitter size={20} color="#000"/></a>
+            </div>
           </div>
         </div>
       </div>
