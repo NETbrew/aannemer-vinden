@@ -29,9 +29,9 @@ const features = [
     title: "Journal",
     description:
       "Write down your thoughts and ideas without thinking how it sounds, if it's good or bad. Just write!",
-    type: "video",
-    path: "https://d3m8mk7e1mf7xn.cloudfront.net/app/newsletter.webm",
-    format: "video/webm",
+    type: "image",
+    path: "/assets/journal.jpg",
+    format: "journal dashboard prototype",
     svg: (
       <IoJournalOutline/>
     ),
@@ -41,8 +41,8 @@ const features = [
     description:
       "Get x.com ready threads to share with your audience. Don't like what you see? Edit it or let buldbase generate a new one.",
     type: "image",
-    path: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
-    alt: "A computer",
+    path: "/assets/threads.jpg",
+    alt: "threads dashboard prototype",
     svg: (
       <BsFilePost />
     ),
@@ -51,6 +51,9 @@ const features = [
     title: "Analytics",
     description:
       "Follow your journal days, audience growth and engagement right from the dashboard.",
+    type: "image",
+    path: "/assets/overview.jpg",
+    alt: "dashboard prototype",
     svg: (
       <IoAnalytics />
     ),
@@ -138,7 +141,7 @@ const Media = ({ feature }: { feature: Feature }) => {
       <Image
         src={path}
         alt={alt}
-        className={`${style} object-cover object-center`}
+        className={`${style} object-cover `}
         width={size.width}
         height={size.height}
       />
