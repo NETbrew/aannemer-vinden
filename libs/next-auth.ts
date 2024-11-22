@@ -61,6 +61,9 @@ export const authOptions: NextAuthOptionsExtended = {
     // It will be used in the login flow to display your logo. If you don't add it, it will look faded.
     logo: `https://${config.domainName}/logoAndName.png`,
   },
+  pages: {
+    signIn: "/auth/sign-in"
+  }
 };
 
 export default NextAuth(authOptions);
