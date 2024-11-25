@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/libs/next-auth";
 import config from "@/config";
+import SideBar from "@/components/SideBar";
 
 // This is a server-side component to ensure the user is logged in.
 // If not, it will redirect to the login page.
@@ -20,5 +21,14 @@ export default async function LayoutPrivate({
     redirect(config.auth.loginUrl);
   }
 
-  return <>{children}</>;
+  return (
+    <div className="flex bg-black h-screen">
+      <div className="w-2/12 flex justify-center p-4">
+        <SideBar/>
+      </div>
+      <div className="w-10/12 rounded-l-3xl bg-white">
+        <div>{children}</div>
+      </div>
+    </div>
+  );
 }
